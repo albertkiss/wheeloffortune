@@ -1,0 +1,37 @@
+﻿
+<script type="text/javascript" src="/Scripts/moment.js"></script>
+<script type="text/javascript" src="/Scripts/bootstrap-datetimepicker.js"></script>
+<div class="container">
+    <div class="row" style="margin: 10px">
+        @*<div class='col-sm-6'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>*@
+        <div class="col-sm-4">
+            <div class="form-group">
+                <div class="input-group" style="float: left" id='datetimepicker1'>
+                    <input id="dateinput" type="text" class="form-control"/>
+                    @*<span class="input-group-addon">*@
+                    <div class="input-group-addon" style="text-align: center">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker1').datetimepicker({
+            format: 'DD/MM/YYYY'
+        });
+    });
+</script>

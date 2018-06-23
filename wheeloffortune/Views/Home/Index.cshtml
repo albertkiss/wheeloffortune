@@ -1,0 +1,87 @@
+﻿@model IList<wheeloffortune.Models.Shift>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Support Wheel of Fate</h2>
+            @*<button class="btn btn-primary btn-lg"
+                        onclick="location.href = '@Url.Action("GenerateNewSchedule", "Home")';return false;">
+                    Generate new schedule &raquo;
+                </button>*@
+        </div>
+        <div class="col-md-8">
+            <p>
+                An aplication that selects two engineers at random to both complete a half day of support each.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-8" style="padding-bottom: 60px">
+            <div class="row" style="margin-bottom: 10px">
+                <div class="col-lg-4" style="text-align: left">
+                    <button id="load-button" class="btn btn-primary">
+                        Load schedule
+                    </button>
+                </div>
+                <div class="col-lg-4" style="text-align: center">
+                    <button id="new-button" class="btn btn-primary">
+                        Generate new schedule &raquo;
+                    </button>
+                </div>
+                <div class="col-lg-4" style="text-align: right">
+                    <button id="save-button" class="btn btn-primary">
+                        Save schedule
+                    </button>
+                </div>
+            </div>
+            <div id="shifts-partial" class="row">
+                @Html.Partial("Shifts", Model)
+            </div>
+        </div>
+        <div class="col-lg-4">
+            @Html.Partial("_Calendar")
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        @*$("#load").click(function () {
+            var categoryId =  $("#ddlCategory").val();
+            $("#dvCategoryResults").load('@(Url.Action("GetCategoryProducts","Home",null, Request.Url.Scheme))?categoryId=' + categoryId);
+        });*@
+
+        $("#load-button").click(() => getShiftData("LoadSchedule", $("#dateinput").val()));
+
+        $("#new-button").click(() => getShiftData("GenerateNewSchedule", $("#dateinput").val()));
+
+        $("#save-button").click(() => getShiftData("SaveSchedule", $("#dateinput").val()));
+        //$("#save-button").click(function () {
+        //    $.ajax({
+        //        url: "Home/GenerateNewSchedule",
+        //        type: "get",
+        //        data: $("form").serialize(), //if you need to post Model data, use this
+        //        success: function (result) {
+        //            $("#shifts-partial").html(result);
+        //        }
+        //    });
+        //});
+
+        function getShiftData(url, startdate) {
+            $.ajax({
+                url: url,
+                type: "get",
+                data: "date="+startdate, //$("form").serialize(), 
+                success: function (result) {
+                    $("#shifts-partial").html(result);
+                }
+            });
+        }
+    });
+</script>

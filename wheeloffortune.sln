@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wheeloffortune", "wheeloffortune\wheeloffortune.csproj", "{1CD24C37-69E8-4F11-BECD-2465346D2880}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wheeloffortune.Library.Tests", "wheeloffortune.Library.Tests\wheeloffortune.Library.Tests.csproj", "{A5E49CE1-2F6A-4989-9296-6F35958DD061}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CD24C37-69E8-4F11-BECD-2465346D2880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CD24C37-69E8-4F11-BECD-2465346D2880}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CD24C37-69E8-4F11-BECD-2465346D2880}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CD24C37-69E8-4F11-BECD-2465346D2880}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5E49CE1-2F6A-4989-9296-6F35958DD061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5E49CE1-2F6A-4989-9296-6F35958DD061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5E49CE1-2F6A-4989-9296-6F35958DD061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5E49CE1-2F6A-4989-9296-6F35958DD061}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE350ED3-A25F-4355-87BA-385D24FC5E4F}
+	EndGlobalSection
+EndGlobal

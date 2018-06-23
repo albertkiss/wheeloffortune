@@ -1,0 +1,31 @@
+﻿@model IEnumerable<wheeloffortune.Models.Shift>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EngineerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShiftDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShiftNumber)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EngineerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShiftDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShiftNumber)
+        </td>
+    </tr>
+}
+
+</table>
